@@ -11,5 +11,7 @@ public:
 	void nhap();
 	void xuat();
 	void timkiem();
+	void CapNhatGia(string ten);
+	void XoaSach();
 };
 

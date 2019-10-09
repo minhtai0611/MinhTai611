@@ -39,5 +39,38 @@ void DS_Sach::timkiem() {
 	}
 }
 void DS_Sach::CapNhatGia(string ten) {
-
+	vector<int>  pos;
+	int masach, gia;
+	for (int i = 0; i < a.size(); i++)
+	{
+		if (a[i].getTen_sach() == ten) pos.push_back(i);
+	}
+	if (pos.size() == 0) cout << "Khong tim thay sach!";
+	else 
+	{
+		if (pos.size() > 1)
+		{
+			for (int j = 0; j < pos.size(); j++)  a[pos[j]].xuatSach();
+			cout << "Nhap ma sach muon cap nhat gia: ";
+			cin >> masach;
+			for (int j = 0; j < pos.size(); j++)
+				{
+					if (a[pos[j]].getMa_sach() == masach) pos[0] = pos[j];
+					break;
+				}
+		}
+	}
+		cout << "Nhap gia tien: ";
+		cin >> gia;
+		a[pos[0]].setGia_tien(gia) ;
+		cout << "Cap nhat gia thanh cong!"<<endl;
+		a[pos[0]].xuatSach();
+}
+void DS_Sach::XoaSach() {
+	string s;
+	getline(cin, s);
+	for (int i = 0; i < a.size(); i++) {
+		if (s == a[i].getTen_sach)
+			a[i]=a[i+1];
+	}
 }
