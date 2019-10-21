@@ -15,13 +15,13 @@ void DS_Sach::nhap()
 {
 	cin >> n;
 	a.resize(n);
-	for (int i = 0; i < n;i++)
+	for (int i = 0; i < n; i++)
 	{
 		cout << "Nhap sach " << i + 1 << endl;
 		a[i].nhapSach();
 	}
 }
-void DS_Sach::xuat(){
+void DS_Sach::xuat() {
 	int n = a.size();
 	for (int i = 0; i < n; i++)
 	{
@@ -46,7 +46,7 @@ void DS_Sach::CapNhatGia(string ten) {
 		if (a[i].getTen_sach() == ten) pos.push_back(i);
 	}
 	if (pos.size() == 0) cout << "Khong tim thay sach!";
-	else 
+	else
 	{
 		if (pos.size() > 1)
 		{
@@ -54,23 +54,27 @@ void DS_Sach::CapNhatGia(string ten) {
 			cout << "Nhap ma sach muon cap nhat gia: ";
 			cin >> masach;
 			for (int j = 0; j < pos.size(); j++)
-				{
-					if (a[pos[j]].getMa_sach() == masach) pos[0] = pos[j];
-					break;
-				}
+			{
+				if (a[pos[j]].getMa_sach() == masach) pos[0] = pos[j];
+				break;
+			}
 		}
 	}
-		cout << "Nhap gia tien: ";
-		cin >> gia;
-		a[pos[0]].setGia_tien(gia) ;
-		cout << "Cap nhat gia thanh cong!"<<endl;
-		a[pos[0]].xuatSach();
+	cout << "Nhap gia tien: ";
+	cin >> gia;
+	a[pos[0]].setGia_tien(gia);
+	cout << "Cap nhat gia thanh cong!" << endl;
+	a[pos[0]].xuatSach();
 }
 void DS_Sach::XoaSach() {
 	string s;
-	getline(cin, s);
-	for (int i = 0; i < a.size(); i++) {
-		if (s == a[i].getTen_sach)
-			a[i]=a[i+1];
+	cin >> s;
+	int n = a.size();
+	for (int i = 0; i < n; i++) {
+		if (s==a[i].getTen_sach() ) {
+			a[i] = a[i + 1];
+			a.pop_back();
+		}
+		
 	}
 }

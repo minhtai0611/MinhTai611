@@ -16,7 +16,7 @@ string Sach::getTen_sach()
 	return Ten_sach;
 }
 
-void Sach::setTen_sach(string &ten)
+void Sach::setTen_sach(string& ten)
 {
 	Ten_sach = ten;
 }
@@ -26,7 +26,7 @@ int Sach::getMa_sach()
 	return Ma_sach;
 }
 
-void Sach::setMa_sach(int &id)
+void Sach::setMa_sach(int& id)
 {
 	Ma_sach = id;
 }
@@ -36,7 +36,7 @@ string Sach::getThe_loai()
 	return The_loai;
 }
 
-void Sach::setThe_loai(string &theloai)
+void Sach::setThe_loai(string& theloai)
 {
 	The_loai = theloai;
 }
@@ -49,8 +49,17 @@ void Sach::setGia_tien(int& tien)
 {
 	Gia_tien = tien;
 }
-void Sach::nhapSach(){
-	string s, t;
+string Sach::getTac_Gia()
+{
+	return Tac_Gia;
+}
+
+void Sach::setTac_Gia(string& ten)
+{
+	Tac_Gia = ten;
+}
+void Sach::nhapSach() {
+	string s, t,str;
 	int n, e;
 	cout << "Nhap ten sach: ";
 	cin >> s;
@@ -64,12 +73,14 @@ void Sach::nhapSach(){
 	cout << "Nhap gia tien: ";
 	cin >> e;
 	setGia_tien(e);
+	cout << "Nhap ten tac gia: ";
+	cin >> str;
+	setTac_Gia(str);
 }
-void Sach::xuatSach(){
+void Sach::xuatSach() {
 	cout << "Ten sach: " << getTen_sach() << endl;
 	cout << "Ma sach: " << getMa_sach() << endl;
 	cout << "The loai: " << getThe_loai() << endl;
 	cout << "Gia tien: " << getGia_tien() << endl;
+	cout << "Tac gia: " << getTac_Gia() << endl;
 }
-
-

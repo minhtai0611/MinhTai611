@@ -14,4 +14,3 @@ public:
 	void CapNhatGia(string ten);
 	void XoaSach();
 };
-
