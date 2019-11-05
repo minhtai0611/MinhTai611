@@ -1,11 +1,7 @@
-#include "DS_Sach.h"
-
-
-
+#include"DS_Sach.h"
 DS_Sach::DS_Sach()
 {
 }
-
 
 DS_Sach::~DS_Sach()
 {
@@ -22,7 +18,7 @@ void DS_Sach::nhap()
 	}
 }
 void DS_Sach::xuat() {
-	int n = a.size();
+	a.resize(n);
 	for (int i = 0; i < n; i++)
 	{
 		cout << "Sach thu " << i + 1 << endl;
@@ -68,13 +64,21 @@ void DS_Sach::CapNhatGia(string ten) {
 }
 void DS_Sach::XoaSach() {
 	string s;
-	cin >> s;
+	int count = 1;
 	int n = a.size();
-	for (int i = 0; i < n; i++) {
-		if (s==a[i].getTen_sach() ) {
-			a[i] = a[i + 1];
-			a.pop_back();
+	vector<int>vt;
+	rewind(stdin);
+	cout << "Nhap ten sach muon xoa: ";
+	getline(cin, s);
+	for (int i = 0; i < n; i++)
+		if (a[i].getTen_sach() == s) vt.push_back(i);
+	if (vt.size() == 0) cout << "Khong tim thay sach!";
+	else
+	{
+		for (int i = vt.size() - 1; i >= 0; i--)
+		{
+			a.erase(a.begin() + i);
 		}
-		
+		cout << "Xoa thanh cong!" << endl;
 	}
 }

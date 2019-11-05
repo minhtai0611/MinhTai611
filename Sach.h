@@ -11,6 +11,7 @@ private:
 	string The_loai;
 	int Gia_tien;
 	string Tac_Gia;
+	string NXB;
 public:
 	Sach();
 	~Sach();
@@ -24,6 +25,8 @@ public:
 	void setGia_tien(int& tien);
 	string getTac_Gia();
 	void setTac_Gia(string& ten);
+	string getNXB();
+	void setNXB(string& nxb);
 	void nhapSach();
 	void xuatSach();
 };

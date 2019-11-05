@@ -58,8 +58,14 @@ void Sach::setTac_Gia(string& ten)
 {
 	Tac_Gia = ten;
 }
+string Sach::getNXB() {
+	return NXB;
+}
+void Sach::setNXB(string& nxb) {
+	NXB = nxb;
+}
 void Sach::nhapSach() {
-	string s, t,str;
+	string s, t,str,str1;
 	int n, e;
 	cout << "Nhap ten sach: ";
 	cin >> s;
@@ -76,6 +82,9 @@ void Sach::nhapSach() {
 	cout << "Nhap ten tac gia: ";
 	cin >> str;
 	setTac_Gia(str);
+	cout << "Nhap ten NXB: ";
+	cin >> str1;
+	setNXB(str1);
 }
 void Sach::xuatSach() {
 	cout << "Ten sach: " << getTen_sach() << endl;
@@ -83,4 +92,5 @@ void Sach::xuatSach() {
 	cout << "The loai: " << getThe_loai() << endl;
 	cout << "Gia tien: " << getGia_tien() << endl;
 	cout << "Tac gia: " << getTac_Gia() << endl;
+	cout << "NXB: " << getNXB() << endl;
 }

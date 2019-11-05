@@ -12,7 +12,10 @@ void main() {
 	sach.CapNhatGia(s);
 	sach.XoaSach();
 	sach.xuat();*/
-	//HoaDon Sach;
-	//Sach.Sum();
+	HoaDon bill;
 
+	vector<Sach>temp;
+	bill.input(temp);
+	
+	bill.output();
 }

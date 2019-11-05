@@ -4,16 +4,18 @@
 class HoaDon
 {
 private:
-	vector<Sach>data;
+	Sach data;
 	int tien;
 	int soluong;
 public:
 	HoaDon();
 	~HoaDon();
-	void Sum();
+	Sach GetSach();
 	int getTong_tien();
-	void setTong_tien(int& sum);
+	void setTong_tien(int sum);
 	int getSo_luong();
-	void setSo_luong(int& count);
+	void setSo_luong(int count);
+	void input(vector<Sach>temp);
+	void output();
 };
 
