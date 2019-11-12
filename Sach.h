@@ -29,5 +29,7 @@ public:
 	void setNXB(string& nxb);
 	void nhapSach();
 	void xuatSach();
+	Sach operator=(const Sach& ten);
+	bool operator==(const Sach& sach)const;
 };
 

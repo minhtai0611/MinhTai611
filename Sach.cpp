@@ -65,7 +65,7 @@ void Sach::setNXB(string& nxb) {
 	NXB = nxb;
 }
 void Sach::nhapSach() {
-	string s, t,str,str1;
+	string s, t, str, str1;
 	int n, e;
 	cout << "Nhap ten sach: ";
 	cin >> s;
@@ -93,4 +93,19 @@ void Sach::xuatSach() {
 	cout << "Gia tien: " << getGia_tien() << endl;
 	cout << "Tac gia: " << getTac_Gia() << endl;
 	cout << "NXB: " << getNXB() << endl;
+}
+Sach Sach::operator=(const Sach& ten) {
+	Ten_sach = ten.Ten_sach;
+	Ma_sach = ten.Ma_sach;
+	The_loai = ten.The_loai;
+	Tac_Gia = ten.Tac_Gia;
+	Gia_tien = ten.Gia_tien;
+	NXB = ten.NXB;
+	return *this;
+}
+bool Sach::operator==(const Sach& sach)const {
+	return ((Ten_sach == sach.Ten_sach)&&
+		(Ma_sach == sach.Ma_sach)&&(The_loai == sach.The_loai)
+		&&(Tac_Gia == sach.Tac_Gia)&&(Gia_tien == sach.Gia_tien)
+		&&(NXB == sach.NXB));
 }

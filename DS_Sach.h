@@ -1,5 +1,6 @@
 #pragma once
 #include"Sach.h"
+#include<vector>
 class DS_Sach
 {
 private:
@@ -13,4 +14,6 @@ public:
 	void timkiem();
 	void CapNhatGia(string ten);
 	void XoaSach();
+	void Push_Book(Sach book);
+	void XuatMangTacGia(string author);
 };

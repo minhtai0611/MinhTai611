@@ -30,7 +30,7 @@ int HoaDon::getSo_luong()
 
 void HoaDon::setSo_luong(int count)
 {
-	soluong=count;
+	soluong = count;
 }
 Sach HoaDon::GetSach() {
 	return data;
@@ -39,7 +39,7 @@ void HoaDon::input(vector<Sach> temp) {
 	int stt;
 	soluong = tien = 0;
 	temp.resize(temp.size());
-	if (temp.size() <= 0) cout << "Khong tim thay sach"<<endl;
+	if (temp.size() <= 0) cout << "Khong tim thay sach" << endl;
 	else
 	{
 		if (temp.size() > 1)
@@ -61,7 +61,6 @@ void HoaDon::input(vector<Sach> temp) {
 	}
 }
 void HoaDon::output() {
-	cout << "Ten: " << data.getTen_sach() << " | Ma sach: " << data.getMa_sach() << " | So luong: " 
+	cout << "Ten: " << data.getTen_sach() << " | Ma sach: " << data.getMa_sach() << " | So luong: "
 		<< soluong << " | Don gia: " << data.getGia_tien() << " | Thanh tien: " << tien << endl;
 }
-

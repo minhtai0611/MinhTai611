@@ -18,4 +18,3 @@ public:
 	void input(vector<Sach>temp);
 	void output();
 };
-

@@ -13,4 +13,3 @@ public:
 	DS_HoaDon();
 	~DS_HoaDon();
 };
-

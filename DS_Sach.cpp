@@ -82,3 +82,24 @@ void DS_Sach::XoaSach() {
 		cout << "Xoa thanh cong!" << endl;
 	}
 }
+void DS_Sach::Push_Book(Sach book)
+{
+	a.push_back(book);
+}
+void DS_Sach::XuatMangTacGia(string author) {
+	int count = 1;
+	int n = a.size();
+	if (n == 0)
+	{
+		cout << "Trong!" << endl;
+		return;
+	}
+	for (int i = 0; i < n; i++)
+	{
+		if (a[i].getTac_Gia() == author) {
+			cout << "Sach thu " << count << endl;
+			a[i].xuatSach();
+			count++;
+		}
+	}
+}
